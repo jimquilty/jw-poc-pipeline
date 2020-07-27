@@ -9,27 +9,27 @@ pipeline {
       }
       stage('Run Kitchen Destroy') {
         steps {
-          pwsh 'kitchen destroy'
+          powershell 'kitchen destroy'
         }
       }
       stage('Run Kitchen Create') {
         steps {
-          pwsh 'kitchen create'
+          powershell 'kitchen create'
         }
       }
       stage('Run Kitchen Converge') {
         steps {
-          pwsh 'kitchen converge'
+          powershell 'kitchen converge'
         }
       }
       stage('Run Kitchen Verify') {
         steps {
-          pwsh 'kitchen verify'
+          powershell 'kitchen verify'
         }
       }
       stage('Kitchen Destroy') {
         steps {
-          pwsh 'kitchen destroy'
+          powershell 'kitchen destroy'
         }
       }
     }
