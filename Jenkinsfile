@@ -2,7 +2,12 @@ pipeline {
     agent any
 
     stages {
-      stage('Download Kitchen File') {
+      stage('Purge the workspace') {
+        steps {
+          sh "rm -rf $WORKSPACE/*"
+        }
+    }
+      stage('Download Repo') {
           steps {
               git url: 'https://github.com/jimquilty/ansible-inspec.git'
           }
