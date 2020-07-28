@@ -4,7 +4,7 @@ pipeline {
     stages {
       stage('Download Kitchen File') {
           steps {
-              git branch: 'docker', url: 'https://github.com/jimquilty/ansible-inspec.git'
+              git url: 'https://github.com/jimquilty/ansible-inspec.git'
           }
       }
       stage('Run Kitchen Destroy') {
